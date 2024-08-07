@@ -68,3 +68,10 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                                       //`--------------------------'  `--------------------------'
   )
 };
+
+// void keyboard_post_init_user(void)
+// {
+//     rgblight_enable();
+//     rgblight_sethsv(HSV_RED);
+//     rgblight_mode(RGBLIGHT_MODE_STATIC_LIGHT);
+// }
