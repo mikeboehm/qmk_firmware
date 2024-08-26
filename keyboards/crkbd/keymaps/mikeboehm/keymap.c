@@ -18,14 +18,30 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 #include QMK_KEYBOARD_H
 
+
+
+// Left-hand home row mods
+#define HOME_A LSFT_T(KC_A)
+#define HOME_R LCTL_T(KC_R)
+#define HOME_S LALT_T(KC_S)
+#define HOME_T LGUI_T(KC_T)
+
+// Right-hand home row mods
+#define HOME_N RGUI_T(KC_N)
+#define HOME_E LALT_T(KC_E)
+#define HOME_I RCTL_T(KC_I)
+#define HOME_O RSFT_T(KC_O)
+
+
+
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     [0] = LAYOUT_split_3x6_3(
   //,-----------------------------------------------------.                    ,-----------------------------------------------------.
-       KC_TAB,    KC_Q,    KC_W,    KC_F,    KC_P,    KC_B,                         KC_J,    KC_L,    KC_U,    KC_Y,   KC_SCLN,  KC_BSPC,
+       KC_TAB,  KC_Q,   KC_W,    KC_F,    KC_P,    KC_B,                         KC_J,    KC_L,    KC_U,    KC_Y,   KC_SCLN,  KC_BSPC,
   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
-      KC_LCTL,    KC_A,    KC_R,    KC_S,    KC_T,    KC_G,                         KC_M,    KC_N,    KC_E,    KC_I, KC_O, KC_QUOT,
+      KC_LCTL, HOME_A,  HOME_R,  HOME_S,  HOME_T,  KC_G,                           KC_M,  HOME_N,  HOME_E,  HOME_I,  HOME_O, KC_QUOT,
   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
-      KC_LSFT,    KC_Z,    KC_X,    KC_C,    KC_D,    KC_V,                         KC_K,    KC_H, KC_COMM,  KC_DOT, KC_SLSH,  KC_ESC,
+      KC_LSFT,   KC_Z,    KC_X,    KC_C,    KC_D,    KC_V,                        KC_K,    KC_H,   KC_COMM,  KC_DOT, KC_SLSH,  KC_ESC,
   //|--------+--------+--------+--------+--------+--------+--------|  |--------+--------+--------+--------+--------+--------+--------|
                                           KC_LGUI,   MO(1),  KC_SPC,     KC_ENT,   MO(2), KC_RALT
                                       //`--------------------------'  `--------------------------'
